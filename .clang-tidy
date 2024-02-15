@@ -1,11 +1,12 @@
 Checks: |
   bugprone*, -bugprone-easily-swappable-parameters, -bugprone-macro-parentheses,
   cert*,
-  cppcoreguidelines*, -cppcoreguidelines-avoid-magic-numbers,
+  cppcoreguidelines*, -cppcoreguidelines-avoid-magic-numbers, -cppcoreguidelines-avoid-const-or-ref-data-members,
   clang-analyzer*, -clang-analyzer-osx*,
   -clang-diagnostic-ignored-optimization-argument,
   hicpp*,
   misc*,
+  -misc-use-anonymous-namespace,
   modernize*, -modernize-use-trailing-return-type, -modernize-use-nodiscard,
   performance*,
   readability*, -readability-identifier-length, -readability-magic-numbers,
