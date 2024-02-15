@@ -1,15 +1,10 @@
 #pragma once
 
-#include <cassert>
-#include <cstdint>
+#include "open62541pp/Common.h"
+#include "open62541pp/detail/helper.h"
+
 #include <type_traits>
 #include <utility>  // exchange, swap
-
-#include "open62541pp/Common.h"
-#include "open62541pp/ErrorHandling.h"
-#include "open62541pp/detail/helper.h"
-#include "open62541pp/open62541.h"
-#include "open62541pp/overloads/comparison.h"
 
 namespace opcua {
 

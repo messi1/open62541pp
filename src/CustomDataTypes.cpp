@@ -1,8 +1,7 @@
 #include "CustomDataTypes.h"
+#include "open62541pp/TypeWrapper.h"
 
 #include <utility>  // move
-
-#include "open62541pp/TypeWrapper.h"
 
 namespace opcua {
 

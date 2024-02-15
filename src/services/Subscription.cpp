@@ -2,20 +2,19 @@
 
 #ifdef UA_ENABLE_SUBSCRIPTIONS
 
-#include <memory>
-#include <utility>  // move
-
 #include "open62541pp/Client.h"
 #include "open62541pp/ErrorHandling.h"
 #include "open62541pp/TypeWrapper.h"
 #include "open62541pp/detail/ClientContext.h"
-#include "open62541pp/open62541.h"
 #include "open62541pp/services/detail/ClientService.h"
 #include "open62541pp/services/detail/RequestHandling.h"
 #include "open62541pp/services/detail/ResponseHandling.h"
 #include "open62541pp/services/detail/SubscriptionContext.h"
 
-#include "../open62541_impl.h"
+#include "open62541/client_subscriptions.h"
+
+#include <memory>
+#include <utility>  // move
 
 namespace opcua::services {
 

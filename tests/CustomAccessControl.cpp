@@ -7,7 +7,9 @@
 #include "open62541pp/Session.h"
 
 #include "CustomAccessControl.h"
-#include "open62541_impl.h"
+#include "open62541pp/overloads/comparison.h"
+
+#include "open62541/server.h"
 
 using namespace opcua;
 

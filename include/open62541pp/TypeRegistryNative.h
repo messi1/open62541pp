@@ -5,7 +5,8 @@
 #pragma once
 
 #include "open62541pp/TypeRegistry.h"
-#include "open62541pp/open62541.h"
+
+// #include "open62541pp/open62541.h"
 
 namespace opcua {
 

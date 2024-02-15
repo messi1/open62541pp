@@ -1,11 +1,13 @@
 #include "open62541pp/AccessControl.h"
+#include "open62541pp/types/Builtin.h"
+#include "open62541pp/types/Composed.h"
+#include "open62541pp/types/DateTime.h"
+#include "open62541pp/types/ExtensionObject.h"
+
+#include "open62541/statuscodes.h"
 
 #include <string_view>
 #include <utility>  // move
-
-#include "open62541pp/open62541.h"
-#include "open62541pp/types/DateTime.h"
-#include "open62541pp/types/ExtensionObject.h"
 
 namespace opcua {
 

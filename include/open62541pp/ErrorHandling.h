@@ -1,8 +1,8 @@
 #pragma once
 
-#include <stdexcept>
+#include "open62541/types.h"
 
-#include "open62541pp/open62541.h"
+#include <stdexcept>
 
 namespace opcua {
 

@@ -26,6 +26,8 @@ if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
 endif()
 option(UAPP_ENABLE_COVERAGE "Enable coverage reporting for gcc/clang" OFF)
 
+option (UAPP_WARNING_AS_ERROR "Enable waring as error" OFF)
+
 # interface "library" to set the c++ standard / compile-time options requested
 add_library(open62541pp_project_options INTERFACE)
 target_compile_features(open62541pp_project_options INTERFACE cxx_std_17)
@@ -44,6 +46,9 @@ if(MSVC)
             /wd4661  # explicit template instantiations in cpp files
             /wd4996  # deprecation gmtime, localtime
     )
+    if(UAPP_WARNING_AS_ERROR)
+        target_compile_options(open62541pp_project_options INTERFACE /WX)
+    endif()
 else()
     target_compile_options(
         open62541pp_project_options
@@ -54,6 +59,9 @@ else()
             -Wnon-virtual-dtor
             -Wpedantic
     )
+    if(UAPP_WARNING_AS_ERROR)
+        target_compile_options(open62541pp_project_options INTERFACE -Werror)
+    endif()
 
     if(UAPP_ENABLE_COVERAGE)
         target_compile_options(open62541pp_project_options INTERFACE --coverage -O0 -g)
@@ -137,6 +145,65 @@ add_library(
     src/types/ExtensionObject.cpp
     src/types/NodeId.cpp
     src/types/Variant.cpp
+    include/open62541pp/AccessControl.h
+    include/open62541pp/async.h
+    include/open62541pp/Bitmask.h
+    include/open62541pp/Client.h
+    include/open62541pp/Common.h
+    include/open62541pp/Config.h
+    include/open62541pp/Crypto.h
+    include/open62541pp/DataType.h
+    include/open62541pp/DataTypeBuilder.h
+    include/open62541pp/ErrorHandling.h
+    include/open62541pp/Event.h
+    include/open62541pp/Logger.h
+    include/open62541pp/MonitoredItem.h
+    include/open62541pp/Node.h
+    include/open62541pp/NodeIds.h
+    include/open62541pp/open62541.h
+    include/open62541pp/open62541pp.h
+    include/open62541pp/Server.h
+    include/open62541pp/Session.h
+    include/open62541pp/Span.h
+    include/open62541pp/Subscription.h
+    include/open62541pp/TypeConverter.h
+    include/open62541pp/TypeRegistry.h
+    include/open62541pp/TypeRegistryNative.h
+    include/open62541pp/TypeWrapper.h
+    include/open62541pp/ValueBackend.h
+    include/open62541pp/detail/ClientContext.h
+    include/open62541pp/detail/ContextMap.h
+    include/open62541pp/detail/ExceptionCatcher.h
+    include/open62541pp/detail/helper.h
+    include/open62541pp/detail/NodeContext.h
+    include/open62541pp/detail/Result.h
+    include/open62541pp/detail/ScopeExit.h
+    include/open62541pp/detail/ServerContext.h
+    include/open62541pp/detail/Staleable.h
+    include/open62541pp/detail/traits.h
+    include/open62541pp/overloads/comparison.h
+    include/open62541pp/services/Attribute.h
+    include/open62541pp/services/Attribute_highlevel.h
+    include/open62541pp/services/Method.h
+    include/open62541pp/services/MonitoredItem.h
+    include/open62541pp/services/NodeManagement.h
+    include/open62541pp/services/services.h
+    include/open62541pp/services/Subscription.h
+    include/open62541pp/services/View.h
+    include/open62541pp/services/detail/AttributeHandler.h
+    include/open62541pp/services/detail/CallbackAdapter.h
+    include/open62541pp/services/detail/ClientService.h
+    include/open62541pp/services/detail/MonitoredItemContext.h
+    include/open62541pp/services/detail/RequestHandling.h
+    include/open62541pp/services/detail/ResponseHandling.h
+    include/open62541pp/services/detail/SubscriptionContext.h
+    include/open62541pp/types/Builtin.h
+    include/open62541pp/types/Composed.h
+    include/open62541pp/types/DataValue.h
+    include/open62541pp/types/DateTime.h
+    include/open62541pp/types/ExtensionObject.h
+    include/open62541pp/types/NodeId.h
+    include/open62541pp/types/Variant.h
 )
 add_library(open62541pp::open62541pp ALIAS open62541pp)
 target_include_directories(

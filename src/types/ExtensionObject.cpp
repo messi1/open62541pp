@@ -1,5 +1,4 @@
 #include "open62541pp/types/ExtensionObject.h"
-
 #include "open62541pp/ErrorHandling.h"
 #include "open62541pp/types/Builtin.h"
 #include "open62541pp/types/NodeId.h"

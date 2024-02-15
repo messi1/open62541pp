@@ -1,12 +1,11 @@
 #include "open62541pp/Logger.h"
-
-#include <cstdarg>  // va_list
-#include <string>
-
 #include "open62541pp/Client.h"
 #include "open62541pp/Server.h"
 
-#include "open62541_impl.h"
+#include "open62541/server.h"
+
+#include <cstdarg>  // va_list
+#include <string>
 
 namespace opcua {
 

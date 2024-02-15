@@ -1,11 +1,4 @@
 #include "open62541pp/Server.h"
-
-#include <atomic>
-#include <cassert>
-#include <cstddef>
-#include <mutex>
-#include <utility>  // move
-
 #include "open62541pp/AccessControl.h"
 #include "open62541pp/Config.h"
 #include "open62541pp/DataType.h"
@@ -17,16 +10,21 @@
 #include "open62541pp/ValueBackend.h"
 #include "open62541pp/detail/Result.h"  // tryInvoke
 #include "open62541pp/detail/ServerContext.h"
-#include "open62541pp/services/Attribute.h"
+#include "open62541pp/overloads/comparison.h"
 #include "open62541pp/types/Builtin.h"
 #include "open62541pp/types/Composed.h"
 #include "open62541pp/types/DataValue.h"
 #include "open62541pp/types/Variant.h"
 
+#include <atomic>
+#include <cassert>
+#include <cstddef>
+#include <mutex>
+#include <utility>  // move
+
 #include "CustomAccessControl.h"
 #include "CustomDataTypes.h"
 #include "CustomLogger.h"
-#include "open62541_impl.h"
 
 namespace opcua {
 

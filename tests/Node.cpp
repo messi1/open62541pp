@@ -2,12 +2,9 @@
 
 #include <algorithm>  // any_of
 
-#include "open62541pp/Config.h"
-#include "open62541pp/Node.h"
-
 #include "helper/ServerClientSetup.h"
-#include "helper/stringify.h"
-
+#include "open62541pp/Node.h"
+#include "open62541pp/overloads/comparison.h"
 using namespace opcua;
 
 TEST_CASE_TEMPLATE("Node", ServerOrClient, Server, Client) {

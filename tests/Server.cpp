@@ -9,7 +9,8 @@
 #include "open62541pp/detail/helper.h"
 #include "open62541pp/types/NodeId.h"
 
-#include "open62541_impl.h"
+#include "open62541/server.h"
+#include "open62541pp/overloads/comparison.h"
 
 using namespace std::chrono_literals;
 using namespace opcua;

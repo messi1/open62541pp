@@ -1,15 +1,14 @@
 #include "open62541pp/services/NodeManagement.h"
-
-#include <cassert>
-
-#include "open62541pp/ErrorHandling.h"
+#include "open62541pp/Client.h"
 #include "open62541pp/Server.h"
-#include "open62541pp/TypeWrapper.h"
-#include "open62541pp/detail/Result.h"  // tryInvoke
+#include "open62541pp/detail/NodeContext.h"
 #include "open62541pp/detail/ServerContext.h"
-#include "open62541pp/detail/helper.h"
+#include "open62541pp/overloads/comparison.h"
+#include "open62541pp/services/detail/ClientService.h"
+#include "open62541pp/types/Composed.h"
+#include "open62541pp/types/NodeId.h"
 
-#include "../open62541_impl.h"
+#include "open62541/server.h"
 
 namespace opcua::services {
 

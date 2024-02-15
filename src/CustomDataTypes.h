@@ -4,7 +4,6 @@
 #include <vector>
 
 #include "open62541pp/DataType.h"
-#include "open62541pp/open62541.h"
 
 namespace opcua {
 

@@ -3,15 +3,14 @@
 
 #include <doctest/doctest.h>
 
+#include "helper/Runner.h"
 #include "open62541pp/Client.h"
-#include "open62541pp/Config.h"
 #include "open62541pp/MonitoredItem.h"
 #include "open62541pp/Server.h"
 #include "open62541pp/Subscription.h"
+#include "open62541pp/overloads/comparison.h"
 #include "open62541pp/types/Composed.h"
 #include "open62541pp/types/Variant.h"
-
-#include "helper/Runner.h"
 
 using namespace opcua;
 using namespace std::literals::chrono_literals;

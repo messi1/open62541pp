@@ -1,5 +1,10 @@
 #pragma once
 
+#include "open62541pp/ErrorHandling.h"
+#include "open62541pp/TypeWrapper.h"
+
+#include "open62541/types.h"
+
 #include <array>
 #include <cstdint>
 #include <iosfwd>  // forward declare ostream
@@ -16,10 +21,6 @@ namespace fs = std::experimental::filesystem;
 #include <filesystem>
 namespace fs = std::filesystem;
 #endif
-
-#include "open62541pp/ErrorHandling.h"
-#include "open62541pp/TypeWrapper.h"
-#include "open62541pp/open62541.h"
 
 namespace opcua {
 

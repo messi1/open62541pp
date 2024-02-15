@@ -1,15 +1,13 @@
 #pragma once
 
+#include "open62541pp/ErrorHandling.h"
+#include "open62541pp/detail/traits.h"  // IsOneOf
+
 #include <algorithm>  // copy_n
 #include <cassert>
 #include <memory>
 #include <string>
 #include <string_view>
-
-#include "open62541pp/Common.h"  // TypeIndex
-#include "open62541pp/ErrorHandling.h"
-#include "open62541pp/detail/traits.h"  // IsOneOf
-#include "open62541pp/open62541.h"
 
 namespace opcua::detail {
 

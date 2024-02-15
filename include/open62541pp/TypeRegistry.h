@@ -2,10 +2,8 @@
 
 #include <type_traits>
 
-#include "open62541pp/Common.h"
 #include "open62541pp/TypeWrapper.h"
 #include "open62541pp/detail/traits.h"
-#include "open62541pp/open62541.h"
 
 namespace opcua {
 

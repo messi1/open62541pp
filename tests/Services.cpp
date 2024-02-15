@@ -1,19 +1,17 @@
 #include <chrono>
 #include <thread>
-#include <variant>
 #include <vector>
 
 #include <doctest/doctest.h>
 
+#include "helper/ServerClientSetup.h"
 #include "open62541pp/Config.h"
 #include "open62541pp/Event.h"
 #include "open62541pp/NodeIds.h"
+#include "open62541pp/overloads/comparison.h"
 #include "open62541pp/services/services.h"
 #include "open62541pp/types/DateTime.h"
 #include "open62541pp/types/ExtensionObject.h"
-
-#include "helper/ServerClientSetup.h"
-#include "helper/stringify.h"
 
 using namespace opcua;
 using namespace std::literals::chrono_literals;

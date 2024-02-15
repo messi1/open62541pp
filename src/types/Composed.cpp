@@ -1,16 +1,14 @@
 #include "open62541pp/types/Composed.h"
+#include "open62541pp/TypeWrapper.h"
+#include "open62541pp/detail/helper.h"
+
+#include "open62541/server.h"
 
 #include <algorithm>
 #include <cassert>
 #include <cstddef>
 #include <string_view>
 #include <type_traits>
-
-#include "open62541pp/ErrorHandling.h"
-#include "open62541pp/TypeWrapper.h"
-#include "open62541pp/detail/helper.h"
-
-#include "../open62541_impl.h"
 
 namespace opcua {
 

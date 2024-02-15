@@ -6,6 +6,7 @@
 #include "open62541pp/Config.h"
 #include "open62541pp/DataType.h"
 #include "open62541pp/DataTypeBuilder.h"
+#include "open62541pp/overloads/comparison.h"
 #include "open62541pp/types/Builtin.h"
 #include "open62541pp/types/NodeId.h"
 

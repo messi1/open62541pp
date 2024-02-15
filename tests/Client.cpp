@@ -4,13 +4,11 @@
 
 #include <doctest/doctest.h>
 
+#include "helper/Runner.h"
 #include "open62541pp/AccessControl.h"
 #include "open62541pp/Client.h"
 #include "open62541pp/Server.h"
-
-#include "open62541_impl.h"
-
-#include "helper/Runner.h"
+#include "open62541pp/overloads/comparison.h"
 
 using namespace std::chrono_literals;
 using namespace opcua;

@@ -2,11 +2,6 @@
 
 #ifdef UA_ENABLE_SUBSCRIPTIONS
 
-#include <algorithm>  // for_each_n
-#include <cstddef>
-#include <memory>
-#include <utility>  // move
-
 #include "open62541pp/Client.h"
 #include "open62541pp/Common.h"  // MonitoringMode
 #include "open62541pp/ErrorHandling.h"
@@ -18,10 +13,13 @@
 #include "open62541pp/services/detail/RequestHandling.h"
 #include "open62541pp/services/detail/ResponseHandling.h"
 #include "open62541pp/types/Composed.h"  // ReadValueId
-#include "open62541pp/types/DataValue.h"
-#include "open62541pp/types/Variant.h"
 
-#include "../open62541_impl.h"
+#include "open62541/client_subscriptions.h"
+#include "open62541/server.h"
+
+#include <algorithm>  // for_each_n
+#include <memory>
+#include <utility>  // move
 
 namespace opcua::services {
 

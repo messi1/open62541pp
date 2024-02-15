@@ -3,7 +3,8 @@
 #include <cstdint>
 #include <type_traits>
 
-#include "open62541pp/open62541.h"
+#include <open62541/nodeids.h>
+#include <open62541/types_generated.h>
 
 namespace opcua {
 

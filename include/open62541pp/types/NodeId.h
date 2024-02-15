@@ -1,18 +1,18 @@
 #pragma once
 
+#include "open62541pp/Common.h"  // Type
+#include "open62541pp/NodeIds.h"
+#include "open62541pp/TypeWrapper.h"
+#include "open62541pp/types/Builtin.h"
+
+#include "open62541/types.h"
+
 #include <cstddef>
 #include <cstdint>
 #include <functional>  // hash
 #include <string>
 #include <string_view>
 #include <variant>
-
-#include "open62541pp/Common.h"  // Type
-#include "open62541pp/NodeIds.h"
-#include "open62541pp/TypeWrapper.h"
-#include "open62541pp/detail/helper.h"
-#include "open62541pp/open62541.h"
-#include "open62541pp/types/Builtin.h"
 
 namespace opcua {
 

@@ -2,16 +2,15 @@
 
 #ifdef UA_ENABLE_ENCRYPTION
 
-#include <string>
-#include <string_view>
-#include <vector>
-
 #include "open62541pp/ErrorHandling.h"
 #include "open62541pp/Logger.h"
 #include "open62541pp/TypeWrapper.h"
 
 #include "CustomLogger.h"
-#include "open62541_impl.h"
+
+#include <string>
+#include <string_view>
+#include <vector>
 
 namespace opcua::crypto {
 

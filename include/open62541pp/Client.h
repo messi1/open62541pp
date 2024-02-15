@@ -1,4 +1,10 @@
 #pragma once
+#include "open62541/util.h"
+#include "open62541pp/Common.h"
+#include "open62541pp/Logger.h"
+#include "open62541pp/Span.h"
+#include "open62541pp/Subscription.h"
+#include "open62541pp/types/NodeId.h"
 
 #include <cstdint>
 #include <functional>
@@ -6,13 +12,6 @@
 #include <string>
 #include <string_view>
 #include <vector>
-
-#include "open62541pp/Common.h"
-#include "open62541pp/Config.h"
-#include "open62541pp/Logger.h"
-#include "open62541pp/Span.h"
-#include "open62541pp/Subscription.h"
-#include "open62541pp/types/NodeId.h"
 
 // forward declaration open62541
 struct UA_Client;

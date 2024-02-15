@@ -1,4 +1,9 @@
 #include "open62541pp/types/Builtin.h"
+#include "open62541/types.h"
+#include "open62541pp/Config.h"
+#include "open62541pp/ErrorHandling.h"
+#include "open62541pp/TypeWrapper.h"
+#include "open62541pp/detail/helper.h"
 
 #include <algorithm>  // copy
 #include <cassert>
@@ -10,12 +15,6 @@
 #include <sstream>
 #include <string_view>
 #include <utility>  // move
-
-#include "open62541/types.h"
-#include "open62541pp/Config.h"
-#include "open62541pp/ErrorHandling.h"
-#include "open62541pp/TypeWrapper.h"
-#include "open62541pp/detail/helper.h"
 
 namespace opcua {
 

@@ -1,14 +1,13 @@
 #pragma once
 
-#include <cstdint>
-#include <string>
-#include <vector>
-
 #include "open62541pp/Bitmask.h"
 #include "open62541pp/Common.h"
 #include "open62541pp/types/Builtin.h"
 #include "open62541pp/types/Composed.h"
 #include "open62541pp/types/NodeId.h"
+
+#include <string>
+#include <vector>
 
 namespace opcua {
 

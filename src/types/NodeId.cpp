@@ -1,7 +1,4 @@
 #include "open62541pp/types/NodeId.h"
-
-#include <cassert>
-
 #include "open62541pp/detail/helper.h"
 
 namespace opcua {

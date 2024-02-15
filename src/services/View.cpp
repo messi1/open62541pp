@@ -1,17 +1,13 @@
 #include "open62541pp/services/View.h"
-
-#include <cstddef>  // size_t
-
 #include "open62541pp/Client.h"
 #include "open62541pp/ErrorHandling.h"
-#include "open62541pp/NodeIds.h"
 #include "open62541pp/Server.h"
-#include "open62541pp/TypeWrapper.h"
 #include "open62541pp/services/detail/ClientService.h"
-#include "open62541pp/services/detail/ResponseHandling.h"
 #include "open62541pp/types/Builtin.h"
 
-#include "../open62541_impl.h"
+#include "open62541/server.h"
+
+#include <cstddef>  // size_t
 
 namespace opcua::services {
 

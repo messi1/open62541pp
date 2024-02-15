@@ -3,7 +3,6 @@
 #include <map>
 #include <memory>
 #include <mutex>
-#include <type_traits>
 
 #include "open62541pp/detail/Staleable.h"
 

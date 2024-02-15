@@ -5,7 +5,7 @@
 #include "open62541pp/Server.h"
 #include "open62541pp/types/Composed.h"
 
-#include "../open62541_impl.h"
+#include "open62541/server.h"
 
 namespace opcua::services {
 

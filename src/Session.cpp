@@ -1,17 +1,17 @@
 #include "open62541pp/Session.h"
-
-#include <string>
-#include <utility>
-
 #include "open62541pp/Config.h"
 #include "open62541pp/ErrorHandling.h"
 #include "open62541pp/Server.h"
 #include "open62541pp/TypeWrapper.h"
+#include "open62541pp/overloads/comparison.h"
 #include "open62541pp/types/Builtin.h"
 #include "open62541pp/types/NodeId.h"
 #include "open62541pp/types/Variant.h"
 
-#include "open62541_impl.h"
+#include "open62541/server.h"
+
+#include <string>
+#include <utility>
 
 namespace opcua {
 

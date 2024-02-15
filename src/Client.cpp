@@ -1,26 +1,39 @@
 #include "open62541pp/Client.h"
-
-#include <atomic>
-#include <cstddef>
-#include <iterator>
-#include <string>
-#include <utility>  // move
-
 #include "open62541pp/AccessControl.h"  // Login
+#include "open62541pp/Common.h"
 #include "open62541pp/Config.h"
 #include "open62541pp/DataType.h"
 #include "open62541pp/ErrorHandling.h"
+#include "open62541pp/Logger.h"
 #include "open62541pp/Node.h"
+#include "open62541pp/Subscription.h"
 #include "open62541pp/TypeWrapper.h"
 #include "open62541pp/detail/ClientContext.h"
-#include "open62541pp/open62541.h"
-#include "open62541pp/services/Attribute.h"  // readValue
+#include "open62541pp/services/Attribute_highlevel.h"
 #include "open62541pp/services/Subscription.h"
 #include "open62541pp/types/Builtin.h"
 #include "open62541pp/types/Composed.h"
 
+#include "open62541/client.h"
+#include "open62541/client_config_default.h"
+#include "open62541/common.h"
+#include "open62541/nodeids.h"
+#include "open62541/types.h"
+#include "open62541/types_generated.h"
+#include "open62541/util.h"
+
 #include "CustomDataTypes.h"
 #include "CustomLogger.h"
+
+#include <atomic>
+#include <cstddef>
+#include <cstdint>
+#include <iterator>
+#include <memory>
+#include <string>
+// #include <string_view>
+#include <utility>  // move
+#include <vector>
 
 namespace opcua {
 
