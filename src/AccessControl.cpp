@@ -20,9 +20,9 @@ AccessControlDefault::AccessControlDefault(bool allowAnonymous, std::vector<Logi
 
 std::vector<UserTokenPolicy> AccessControlDefault::getUserTokenPolicies() {
     std::vector<UserTokenPolicy> result;
-    std::string_view issuedTokenType{};
-    std::string_view issuerEndpointUrl{};
-    std::string_view securityPolicyUri{};
+    const std::string_view issuedTokenType{};
+    const std::string_view issuerEndpointUrl{};
+    const std::string_view securityPolicyUri{};
     if (allowAnonymous_) {
         result.emplace_back(
             policyIdAnonymous,

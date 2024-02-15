@@ -16,7 +16,9 @@ std::vector<Variant> call(
     const NodeId& methodId,
     Span<const Variant> inputArguments
 ) {
-    UA_CallMethodRequest item = detail::createCallMethodRequest(objectId, methodId, inputArguments);
+    const UA_CallMethodRequest item = detail::createCallMethodRequest(
+        objectId, methodId, inputArguments
+    );
     CallMethodResult result = UA_Server_call(server.handle(), &item);
     return detail::getOutputArguments(result);
 }

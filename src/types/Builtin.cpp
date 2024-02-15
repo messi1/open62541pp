@@ -8,10 +8,13 @@
 #include <iterator>  // istreambuf_iterator
 #include <ostream>
 #include <sstream>
+#include <string_view>
 #include <utility>  // move
 
+#include "open62541/types.h"
 #include "open62541pp/Config.h"
 #include "open62541pp/ErrorHandling.h"
+#include "open62541pp/TypeWrapper.h"
 #include "open62541pp/detail/helper.h"
 
 namespace opcua {
@@ -276,8 +279,8 @@ const DiagnosticInfo* DiagnosticInfo::getInnerDiagnosticInfo() const noexcept {
 
 /* ---------------------------------------- NumericRange ---------------------------------------- */
 
-NumericRange::NumericRange(std::string_view encodedRange) {
-    UA_String encodedRangeNative = detail::toNativeString(encodedRange);
+NumericRange::NumericRange(const std::string_view& encodedRange) {
+    const UA_String encodedRangeNative = detail::toNativeString(encodedRange);
     UA_NumericRange native{};
 #if UAPP_OPEN62541_VER_GE(1, 1)
     const auto status = UA_NumericRange_parse(&native, encodedRangeNative);

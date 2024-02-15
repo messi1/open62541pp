@@ -91,7 +91,7 @@ public:
         const NodeId& objectType = ObjectTypeId::BaseObjectType,
         const NodeId& referenceType = ReferenceTypeId::HasComponent
     ) {
-        NodeId resultingId = services::addObject(
+        const NodeId resultingId = services::addObject(
             connection_, nodeId_, id, browseName, attributes, objectType, referenceType
         );
         return {connection_, resultingId};
@@ -105,7 +105,7 @@ public:
         const NodeId& variableType = VariableTypeId::BaseDataVariableType,
         const NodeId& referenceType = ReferenceTypeId::HasComponent
     ) {
-        NodeId resultingId = services::addVariable(
+        const NodeId resultingId = services::addVariable(
             connection_, nodeId_, id, browseName, attributes, variableType, referenceType
         );
         return {connection_, resultingId};
@@ -115,7 +115,7 @@ public:
     Node addProperty(
         const NodeId& id, std::string_view browseName, const VariableAttributes& attributes = {}
     ) {
-        NodeId resultingId = services::addProperty(
+        const NodeId resultingId = services::addProperty(
             connection_, nodeId_, id, browseName, attributes
         );
         return {connection_, resultingId};
@@ -132,7 +132,7 @@ public:
         const MethodAttributes& attributes = {},
         const NodeId& referenceType = ReferenceTypeId::HasComponent
     ) {
-        NodeId resultingId = services::addMethod(
+        const NodeId resultingId = services::addMethod(
             connection_,
             nodeId_,
             id,
@@ -154,7 +154,7 @@ public:
         const ObjectTypeAttributes& attributes = {},
         const NodeId& referenceType = ReferenceTypeId::HasSubtype
     ) {
-        NodeId resultingId = services::addObjectType(
+        const NodeId resultingId = services::addObjectType(
             connection_, nodeId_, id, browseName, attributes, referenceType
         );
         return {connection_, resultingId};
@@ -168,7 +168,7 @@ public:
         const NodeId& variableType = VariableTypeId::BaseDataVariableType,
         const NodeId& referenceType = ReferenceTypeId::HasSubtype
     ) {
-        NodeId resultingId = services::addVariableType(
+        const NodeId resultingId = services::addVariableType(
             connection_, nodeId_, id, browseName, attributes, variableType, referenceType
         );
         return {connection_, resultingId};
@@ -194,7 +194,7 @@ public:
         const DataTypeAttributes& attributes = {},
         const NodeId& referenceType = ReferenceTypeId::HasSubtype
     ) {
-        NodeId resultingId = services::addDataType(
+        const NodeId resultingId = services::addDataType(
             connection_, nodeId_, id, browseName, attributes, referenceType
         );
         return {connection_, resultingId};

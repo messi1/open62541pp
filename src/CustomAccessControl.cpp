@@ -423,6 +423,7 @@ void CustomAccessControl::onSessionClosed(const NodeId& sessionId) {
 
 std::vector<Session> CustomAccessControl::getSessions() const {
     std::vector<Session> result;
+    result.reserve(sessionIds_.size());
     for (auto id : sessionIds_) {
         result.emplace_back(server_, std::move(id));
     }

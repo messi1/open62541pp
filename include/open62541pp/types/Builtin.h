@@ -274,7 +274,7 @@ inline bool operator!=(
 class NumericRange {
 public:
     NumericRange() = default;
-    explicit NumericRange(std::string_view encodedRange);
+    explicit NumericRange(const std::string_view& encodedRange);
     explicit NumericRange(std::vector<NumericRangeDimension> dimensions);
     explicit NumericRange(const UA_NumericRange& native);
 
